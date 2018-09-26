@@ -1,0 +1,13 @@
+ALU.v  
+bram.v  
+bsram.v  
+control_unit.v  
+decode.v  
+execute.v  
+fetch.v  
+mem_interface.v  
+memory.v  
+regFile.v  
+RISC_V_Core.v  
+tb_RISC_V_Core.v  
+writeback.v

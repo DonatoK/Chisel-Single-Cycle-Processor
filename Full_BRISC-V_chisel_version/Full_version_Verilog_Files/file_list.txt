@@ -1,0 +1,11 @@
+ALU.v  
+BRISC_V_Core.v  
+bsram.v  
+control_unit.v  
+decode.v  
+execute.v  
+fetch.v  
+mem_interface.v 
+memory.v  
+register_file.v  
+writeback.v

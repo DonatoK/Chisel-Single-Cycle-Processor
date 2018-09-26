@@ -1,0 +1,18 @@
+module writeback( // @[:@3.2]
+  input         clock, // @[:@4.4]
+  input         reset, // @[:@5.4]
+  input         io_clock, // @[:@6.4]
+  input         io_reset, // @[:@6.4]
+  input         io_opWrite, // @[:@6.4]
+  input         io_opSel, // @[:@6.4]
+  input  [4:0]  io_opReg, // @[:@6.4]
+  input  [31:0] io_ALU_Result, // @[:@6.4]
+  input  [31:0] io_memory_data, // @[:@6.4]
+  output        io_write, // @[:@6.4]
+  output [4:0]  io_write_reg, // @[:@6.4]
+  output [31:0] io_write_data // @[:@6.4]
+);
+  assign io_write = io_opWrite; // @[writeback.scala 29:17:@9.4]
+  assign io_write_reg = io_opReg; // @[writeback.scala 28:17:@8.4]
+  assign io_write_data = io_opSel ? io_memory_data : io_ALU_Result; // @[writeback.scala 32:19:@12.6 writeback.scala 34:19:@15.6]
+endmodule
